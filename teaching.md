@@ -1,5 +1,5 @@
 # Relativity (in Russian)
-* <a href='relativity/relativity_syllabus.pdf'>Syllabus</a>
+* <a href='/teaching/relativity/relativity_syllabus.pdf'>Syllabus</a>
 * Lectures
 
 # Group theory (in Russian)
