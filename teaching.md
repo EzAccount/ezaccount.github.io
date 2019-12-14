@@ -12,7 +12,7 @@ I also assist in teaching group theory and other mathematical special courses fo
 
 * Assignments (<a href="group_theory/gt1.pdf">1</a>, <a href="group_theory/gt2.pdf">2</a>, <a href="group_theory/gt3.pdf">3</a>)
 
-* English-translated assginments (<a href="group_theory/gt1_en.pdf">1</a>, <a href="group_theory/gt2_en.pdf">2</a>, <a href="group_theory/gt3_en.pdf">3</a>,<a href="group_theory/gt4_en.pdf">4</a>)
+* English-translated assginments (<a href="group_theory/gt1_en.pdf">1</a>, <a href="group_theory/gt2_en.pdf">2</a>, <a href="group_theory/gt3_en.pdf">3</a>, <a href="group_theory/gt4_en.pdf">4</a>)
 
 * Exam samples (<a href="group_theory/examset1.pdf">pdf</a>)
 
