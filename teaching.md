@@ -1,9 +1,14 @@
 In Fall 2019 I teach general physics course and special course on Relativity theory for high school students.
 
 I also assist in teaching group theory and other mathematical special courses for Faculty of Physics students.
+##  Intoduction to Quantum Physics
+
 ##  Relativity <font size="3">in Russian</font>
 * <a href='/teaching/relativity/relativity_syllabus.pdf'>Syllabus</a>
 * Lectures
+
+## General Physics <font size="3">in Russian</font>
+* <a href='/teaching/gp/fall2019exam.pdf'>Theoretical questions for exam </a>
 
 ---
 <center>Past courses:</center>
