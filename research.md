@@ -17,18 +17,19 @@ Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
 * Mikhail Tikhonov and Gennadiy Koval. "Exact solution for a spin chain with quenched disorder" _in preporation_
 
 # 	Conferences, visits
+   <font size="3">January - February 2020 Charlottesville, VA, USA </font>
 *   Scientific visit at University of Virginia
 
-    <font size="3">January - February 2020 Charlottesville, VA, USA </font>
     
+    <font size="3">23-27 July 2018, Glaglow, UK</font>
 *   31st International Symposium on Rarefied Gas Dynamics
 
-    <font size="3">23-27 July 2018, Glaglow, UK</font>
-    
-*   International scientific conference of students and young scientists "Lomonosov"
 
     <font size="3">9-13 April 2018,  Moscow, Russia</font>
-    
-*   Internship at mathCCES RWTH
+*   International scientific conference of students and young scientists "Lomonosov"
+
 
     <font size="3">25 Jan -- 31 Mar 2018 Aachen, Germany</font>
+*   Internship at mathCCES RWTH
+
+
