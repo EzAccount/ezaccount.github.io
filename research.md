@@ -17,6 +17,7 @@ Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
 * Mikhail Tikhonov and Gennadiy Koval. "Exact solution for a spin chain with quenched disorder" _in preporation_
 
 # 	Conferences, visits
+
    <font size="3">January - February 2020 Charlottesville, VA, USA </font>
 *   Scientific visit at University of Virginia
 
