@@ -12,8 +12,8 @@ Rarefied gas dynamics, Lattice Boltzmann methods, shock-waves, numerical simulat
 
 # Publications, preprints
 * Maxim Timokhin, Mikhail Tikhonov, Irina Mursenkova and Irina Znamenskaya.Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave._in preporation_
-* Timokhin Maksim and Mikhail Tikhonov. "Numerical simulations of micro-channel devices with Lattice Boltzmann method." AIP Conference Proceedings. Vol. 2132. No. 1. AIP Publishing, 2019.
-* Petrov Leonid and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a>
+* Maksim Timokhin and Mikhail Tikhonov. "Numerical simulations of micro-channel devices with Lattice Boltzmann method." AIP Conference Proceedings. Vol. 2132. No. 1. AIP Publishing, 2019.
+* Leonid Petrov and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a>
 * Mikhail Tikhonov and Gennadiy Koval. "Exact solution for a spin chain with quenched disorder" _in preporation_
 
 # 	Conferences, visits
