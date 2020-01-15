@@ -1,5 +1,5 @@
 # Research interests
-Exact solutions, integrability, analytical methods, integrable probability,random field Ising model.
+Exact solutions, integrability, analytical methods, integrable probability, random field Ising model.
 
 Spin chains and spin systems, random matrices, determinant processes, quantum adiabaticity.
 
