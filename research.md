@@ -6,11 +6,8 @@ Random field Ising model, spin chains and spin systems, integrable probability, 
 Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
 
 # Travel plans for 2020
-
-* The 17th International Conference for Mesoscopic Methods in Engineering and Science July 2020
-
 * University of Virginia, January 8th - February 3rd
-
+* The 17th International Conference for Mesoscopic Methods in Engineering and Science July 2020
 * CMI-HIMR Integrable Probability Summer School, July 27th - August 7th
 
 # Publications, preprints
