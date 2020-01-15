@@ -1,9 +1,9 @@
 # Research interests
-Exact solutions, integrability, analytical methods
+Exact solutions, integrability, analytical methods, integrable probability,random field Ising model.
 
-Random field Ising model, spin chains and spin systems, integrable probability, random matrices, quantum adiabaticity.
+Spin chains and spin systems, random matrices, determinant processes, quantum adiabaticity.
 
-Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
+Rarefied gas dynamics, Lattice Boltzmann methods, shock-waves, numerical simulations, Grad's moment method,extended gas dynamics
 
 # Travel plans for 2020
 * University of Virginia, January 8th - February 3rd
@@ -21,5 +21,3 @@ Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
 *   31st International Symposium on Rarefied Gas Dynamics <font size="1">23-27 July 2018, Glaglow, UK</font>
 *   International scientific conference of students and young scientists "Lomonosov"    <font size="1">9-13 April 2018,  Moscow, Russia</font> 
 *   Internship at mathCCES RWTH   <font size="1">25 Jan -- 31 Mar 2018 Aachen, Germany</font>
-
-
