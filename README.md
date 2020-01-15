@@ -1,4 +1,5 @@
 # About 
+ <img src="photo2020.jpg?raw=true" style="width:500px;height:600px;"> 
 I am 4th year undergraduate student(currently on leave of absence) at Faculty of Physics, Lomonosov Moscow State University and Teacher Assitant at Advanced Educational Scientific Center of Lomonosov Moscow State University.
 
 Short CV (<a href='tikhonov_cv.pdf'>pdf</a>)
