@@ -1,15 +1,10 @@
 # About 
-I am 4th year undergraduate student(currently on leave of absence) at Faculty of Physics, Lomonosov Moscow State University and Teacher Assitant at Advanced Educational Scientific Center of Lomonosov Moscow State University.
+![](photo2020.jpg?raw=true)
 
-Short CV (<a href='tikhonov_cv.pdf'>pdf</a>)
+I am 4th year undergraduate student(currently on leave of absence) at Faculty of Physics, Lomonosov Moscow State University, working with prof. G.V. Koval on spin systems. 
 
-# Research interests
-Random field Ising model, spin chains, spin systems, integrable probability, Yang-Baxter equation, random matrices, quantum adiabaticity.
+Since fall 2019 I am also working with [Leonid Petrov](https://lpetrov.cc/) in integrable probability project.
+In addition I am doing some research with Maxim Timokhin on rarefied gas dynamics (LBM methods), since summer 2017.
 
-Rarefied gas dynamics, Lattice Boltzmann methods, extended gas dynamics
-
-# Teaching 
-In Fall 2019 I teach general physics course and special course on Relativity theory for high school students.
-
-I also assist in teaching group theory for Faculty of Physics students.
+for additional information see CV (<a href='tikhonov_cv.pdf'>pdf</a>)
 
