@@ -1,5 +1,5 @@
 # About 
-Mathematician by day, physist by night. 
+Mathematician by day, physicist by night. 
 
 Since fall 2019 I am working with [Leonid Petrov](https://lpetrov.cc/) in integrable probability project. Starting from fall 2020 I'm enrolled in [UVA PhD programm in Mathematics](https://math.virginia.edu/graduate/). 
 
