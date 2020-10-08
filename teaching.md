@@ -1,14 +1,10 @@
-In Spring 2020 I assist in teaching group theory for Faculty of Physics students.
-
-<div style="text-align: center;">Spring 2020 courses:</div>
-##  Group Theory <span style="font-size: small; ">in Russian</span>
-
+Starting from September 2020 I'm teaching at UVA as part of my PhD program. As for fall 2020, I'm assisting on MATH2310 (Multivariable calculus).
 ---
 <div style="text-align: center;">Past courses:</div>
 
+##  Group Theory <span style="font-size: small; ">in Russian, spring 2020</span>
 ##  Relativity <font size="3">in Russian, fall 2019</font>
 * <a href='/teaching/relativity/relativity_syllabus.pdf'>Syllabus</a>
-* Lectures
 
 ## General Physics <font size="3">in Russian, fall 2019</font>
 * <a href='/teaching/gp/fall2019exam.pdf'>Theoretical questions for exam </a>
