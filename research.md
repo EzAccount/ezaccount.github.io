@@ -1,6 +1,6 @@
 # Publications, preprints
-* Maxim Timokhin, Mikhail Tikhonov, Irina Mursenkova and Irina Znamenskaya.Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave. _in preparation_
-* Leonid Petrov and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a>
+* Maxim Timokhin, Mikhail Tikhonov, Irina Mursenkova and Irina Znamenskaya.Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave. <a href="https://aip.scitation.org/doi/10.1063/5.0029612">DOI  10.1063/5.0029612 </a>
+* Leonid Petrov and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a><a href="https://doi.org/10.1007/s10955-020-02652-7">DOI 10.1007/s10955-020-02652-7</a>
 * Maksim Timokhin and Mikhail Tikhonov. "Numerical simulations of micro-channel devices with Lattice Boltzmann method." AIP Conference Proceedings, Volume 2132, Issue 1. <a href="https://aip.scitation.org/doi/abs/10.1063/1.5119653">DOI 10.1063/1.5119653</a>
 
 
@@ -11,11 +11,6 @@ Exact solutions, integrability, analytical methods, integrable probability, rand
 Spin chains and spin systems, random matrices, determinant processes, quantum adiabaticity.
 
 Rarefied gas dynamics, Lattice Boltzmann methods, shock-waves, numerical simulations, Grad's moment method, extended gas dynamics
-
-# Travel plans for 2020
-* University of Virginia, January 8th - February 3rd
-* The 17th International Conference for Mesoscopic Methods in Engineering and Science July 2020
-* CMI-HIMR Integrable Probability Summer School, July 27th - August 7th
 
 # 	Conferences, visits
 *   Scientific visit at University of Virginia, <font size="1">January - February 2020 Charlottesville, VA, USA </font>
