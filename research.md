@@ -1,6 +1,6 @@
 # Publications, preprints
 * Maxim Timokhin, Mikhail Tikhonov, Irina Mursenkova and Irina Znamenskaya.Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave. <a href="https://aip.scitation.org/doi/10.1063/5.0029612">DOI  10.1063/5.0029612 </a>
-* Leonid Petrov and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a><a href="https://doi.org/10.1007/s10955-020-02652-7">DOI 10.1007/s10955-020-02652-7</a>
+* Leonid Petrov and Mikhail Tikhonov. "Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions" <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a>, <a href="https://doi.org/10.1007/s10955-020-02652-7">DOI 10.1007/s10955-020-02652-7</a>
 * Maksim Timokhin and Mikhail Tikhonov. "Numerical simulations of micro-channel devices with Lattice Boltzmann method." AIP Conference Proceedings, Volume 2132, Issue 1. <a href="https://aip.scitation.org/doi/abs/10.1063/1.5119653">DOI 10.1063/1.5119653</a>
 
 
