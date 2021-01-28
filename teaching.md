@@ -2,6 +2,8 @@
 
 ### MATH3250: Ordinary Differential Equations (in English)
 
+* <a href='/teaching/ode2021'> Course page </a>
+
 ---
 <div style="text-align: center;">Past courses:</div>
 
