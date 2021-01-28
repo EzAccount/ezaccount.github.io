@@ -1,16 +1,16 @@
-Starting from September 2020 I'm teaching at UVA as part of my PhD program. As for fall 2020, I'm assisting on MATH2310 (Multivariable calculus).
-
+### MATH3250: Ordinary Differential Equations
 ---
 <div style="text-align: center;">Past courses:</div>
 
-##  Group Theory <span style="font-size: small; ">in Russian, spring 2020</span>
-##  Relativity <font size="3">in Russian, fall 2019</font>
+###  MATH2310: Multivariable calculus (in English, fall 2020)
+###  Group Theory (in Russian, spring 2020)
+###  Relativity (in Russian, fall 2019)
 * <a href='/teaching/relativity/relativity_syllabus.pdf'>Syllabus</a>
 
-## General Physics <font size="3">in Russian, fall 2019</font>
+### General Physics (in Russian, fall 2019)
 * <a href='/teaching/gp/fall2019exam.pdf'>Theoretical questions for exam </a>
 
-## Group theory <font size="3">in Russian, 2019</font>
+### Group theory (in Russian, 2019)
 
 * Assignments (<a href="group_theory/gt1.pdf">1</a>, <a href="group_theory/gt2.pdf">2</a>, <a href="group_theory/gt3.pdf">3</a>)
 
@@ -18,5 +18,5 @@ Starting from September 2020 I'm teaching at UVA as part of my PhD program. As f
 
 * Exam samples (<a href="group_theory/examset1.pdf">pdf</a>)
 
-## Introduction to differential forms and cohomology for physicists <font size="3">in Russian, fall 2018</font> 
+### Introduction to differential forms and cohomology for physicists (in Russian, fall 2018)
 * Lecture notes with assignments (<a href="dg/assignments.pdf">pdf</a>)
