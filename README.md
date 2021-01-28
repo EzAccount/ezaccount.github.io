@@ -1,6 +1,6 @@
 # About 
 
-<img align="left" width="400" height="300" src="photo2020.jpg">
+<img align="left" width="400" height="300" src="photo2020.jpg" class="padding_img">
 
 Mathematician by day, physicist by night. 
 
