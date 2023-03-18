@@ -1,13 +1,9 @@
 # About 
 
-<img align="left" width="400" height="300" src="photo2020.jpg" Hspace="10" Vspace="10">
+<img align="left" width="400" height="300" src="photo2022.png" Hspace="10" Vspace="10">
 
-Mathematician by day, physicist by night. 
+I am a PhD student/candidate at UVA Math, currently working under the supervision of [L. Petrov](https://lpetrov.cc/). 
 
-Since Fall 2020 PhD Student at UVA Math.
+My previous research experience include working with M. Timokhin on rarefied gas dynamics and applications, and with Prof. Koval on classical and quantum spin chain systems. 
 
-Since Fall 2019 I am working with [Leonid Petrov](https://lpetrov.cc/). 
-
-I am a part of group led by [Maxim Timokhin](https://www.linkedin.com/in/myutimokhin/) focused on rarefied gas dynamics (in particular: LB method, UGKS).
-
-CV (<a href='tikhonov_cv.pdf'>pdf</a>)
+For more details, you can refer to my CV which is accessible [here](cv.pdf).
