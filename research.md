@@ -2,8 +2,10 @@
 
 * (with L. Petrov) Asymptotics of noncolliding q-exchangeable random walks (2023) • arXiv:2303.02380 [math.PR] 
 * (with L. Petrov) Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions (2019) • Journal of Statistical Physics, 181 (2020), 1996-2010 • arXiv:1912.08671 [math.PR] 
-* (with M. Timokhin, I. Mursenkova and I. Znamenskaya)  Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave.  
-* (with M. Timokhin) Numerical simulations of micro-channel devices with Lattice Boltzmann method. <a href="https://aip.scitation.org/doi/abs/10.1063/1.5119653">AIP Conference Proceedings</a>, Volume 2132, Issue 1. 
+* (with  A. Kuznetsov, I. Mursenkova, A. Militsina,  M. Timokhin) Digital processing of shadowgraph images taking into account the diffraction of light at a shock front
+* (with M. Timokhin, I. Mursenkova and I. Znamenskaya)  Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave. <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2127/1/012001/meta"> Journal of Physics: Conference Series, Volume 2127</a>
+* (with M. Timokhin) Numerical simulations of micro-channel devices with Lattice Boltzmann method. <a href="https://aip.scitation.org/doi/abs/10.1063/1.5119653">AIP Conference Proceedings</a>, Volume 2132, Issue 1. \
+
 
 
 
