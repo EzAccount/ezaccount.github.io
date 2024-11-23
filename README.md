@@ -1,6 +1,6 @@
 # About 
 
-<img align="left" width="400" height="300" src="photo2022.png" Hspace="10" Vspace="10">
+<img align="left" width="400" height="300" src="photo2024.png" Hspace="10" Vspace="10">
 
 I am a PhD student/candidate at UVA Math, currently working under the supervision of [L. Petrov](https://lpetrov.cc/). 
 
