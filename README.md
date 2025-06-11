@@ -1,3 +1,13 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JB39JFSL7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JB39JFSL7C');
+</script>
+
 # About 
 
 <img align="left" width="390" height="380" src="photo2024.png" Hspace="10" Vspace="10">
