@@ -13,5 +13,7 @@ I work on problems in integrable probability and statistical mechanics, studying
 
 During my undergraduate studies in physics, I also worked with systems in statistical mechanics. My work with M. Timokhin was focused on Lattice Boltzmann Method and rarefied gas dynamics, and my undergaduate thesis (advised by G. Koval) was about classical Ising model with quenched disorder and quantum spin chains.
 
+<b>Keywords:</b> Integrable probability, interacting particle systems, stochastic six-vertex model, Yang-Baxter equation, stochastic vertex models, quantum spin systems, random tilings, symmetric functions, representation theory, algebraic combinatorics, KPZ universality
+
 
 
