@@ -1,22 +1,20 @@
+### Teaching experience:
 
+## at UVA, as Intructor of Record:
 
-### at UVA:
+* MATH2310: Multivariable calculus • spring 2026
+* MATH1320: Calculus II • spring 2025
+* MATH1310: Calculus I •  fall 2022
+* MATH1210: Survey of Calculus I • spring 2022, fall 2023, fall 2025
 
-* MATH1310: Calculus I, as Instructor, fall 2022
-* MATH1210: Survey of Calculus I, as Instructor, spring 2022
-* MATH3250: Ordinary Differential Equations, as TA, fall and spring 2021
-* MATH2310: Multivariable calculus, as TA, fall 2020
+## at UVA, as TA:
 
-### Teaching experience in Russia 
+* MATH3250: Ordinary Differential Equations, fall and spring 2021
+* MATH2310: Multivariable calculus, fall 2020
 
-* Group Theory (in Russian, fall 2019 -- spring 2020)
-* Relativity (in Russian, fall 2019)
-* General Physics (in Russian, fall 2019)
-* Introduction to differential forms and cohomology for physicists (in Russian, fall 2018)
+## Prior to UVA
 
-### Resources for past courses:
-
-* <a href='/teaching/relativity/relativity_syllabus.pdf'>Syllabus for Relativity </a>
-* Theoretical questions for <a href='/teaching/gp/fall2019exam.pdf'>exam</a>
-* Group theory problem sets (<a href="group_theory/gt1_en.pdf">1</a>, <a href="group_theory/gt2_en.pdf">2</a>, <a href="group_theory/gt3_en.pdf">3</a>,  <a href="group_theory/gt4_en.pdf">4</a>) and <a href="group_theory/examset1.pdf">exam</a> 
-* Lecture <a href="dg/assignments.pdf">notes</a> with assignments 
+* Group Theory • Moscow State University, TA • fall 2019, spring 2020
+* Relativity • Kolmogorov Boarding school, Instructor • fall 2019
+* General Physics • Kolmogorov Boarding school, Instructor • spring 2019, fall 2019
+* Introduction to differential forms • Moscow State University, TA • fall 2018
