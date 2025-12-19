@@ -7,7 +7,7 @@ I am a PhD candidate at UVA Math, advised by <b>[L. Petrov](https://lpetrov.cc/)
 
 I expect to graduate in Spring 2026, and <b>I am on the job market for Fall 2026</b>. 
 
-For more details about my experience, please see my <b>CV [here](TikhonovCV.pdf) </b>.
+For more details about my experience, please see my <b>CV [here](TikhonovCV_dec25.pdf) </b>.
 
 I work on problems in integrable probability and statistical mechanics, studying stochastic systems such as random permutations, lozenge tilings, stochastic vertex models, polymer models, and random walks. A central feature of these systems is <i>integrability</i>, which arises from their underlying geometric or algebraic structures. Recently, my research has centered on applications of vertex models (and related tools, such as the Yang-Baxter Equation) to other areas of mathematics and to other sciences.
 
