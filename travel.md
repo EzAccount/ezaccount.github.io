@@ -1,7 +1,7 @@
 ### 2026
 
 ## January
-4-7 • Washington, DC • (Joint Mathematics Meetings)[https://jointmathematicsmeetings.org/jmm]; Special Session "Random Tilings, Random Permutations, and Particle Systems"
+4-7 • Washington, DC • [Joint Mathematics Meetings](https://jointmathematicsmeetings.org/jmm); Special Session "Random Tilings, Random Permutations, and Particle Systems"
 
 ## July
 19-2 • Philadelphia, PA • International Congress of Mathematics
