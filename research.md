@@ -1,5 +1,6 @@
 # Publications, preprints
 
+* Random pemutations and stochastic Demazure product (2025+) • In preparation
 * (with L. Petrov) Asymptotics of noncolliding q-exchangeable random walks (2023) • <a href="https://iopscience.iop.org/article/10.1088/1751-8121/acedda/meta"> Journal of Physics A: Mathematical and Theoretical, 56(36) </a>• <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380 [math.PR]</a> 
 * (with  A. Kuznetsov, I. Mursenkova, A. Militsina,  M. Timokhin) Digital processing of shadowgraph images taking into account the diffraction of light at a shock front (2021) <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2127/1/012001/meta"> Journal of Physics: Conference Series</a>, Volume 2127.
 * (with M. Timokhin, I. Mursenkova and I. Znamenskaya)  Shock-wave Thickness Influence to the Light Diffraction on a Plane Shock Wave (2020) <a href="https://aip.scitation.org/doi/10.1063/5.0029612">Physics of Fluids 32, 116103</a>
@@ -11,6 +12,6 @@
 
 # Research interests
 
-Exact solutions, integrability, analytical methods, integrable probability, random field Ising model.
+Integrable probability, KPZ, vertex models, YBE, random permutations, random field Ising model
 
-Spin chains and spin systems, random matrices, determinant processes, quantum adiabaticity.
+Spin systems, random matrices, determinantal point process, algebraic combinatorics, symmetric polynomials
