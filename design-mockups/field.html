@@ -1,0 +1,191 @@
+<title>Design G — Field (full-page six-vertex)</title>
+<style>
+  /* Full-viewport six-vertex path field; content floats above in translucent panels. */
+  :root {
+    --ground: #0e1014;
+    --veil: rgba(21, 24, 30, 0.84);
+    --veil-edge: rgba(236, 231, 221, 0.12);
+    --ivory: #ece7dd;
+    --dim: #969188;
+    --cobalt: #4f7df9;
+    --cobalt-dim: #33447e;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ivory);
+    font: 1.03rem/1.66 'Iowan Old Style', Palatino, Georgia, serif;
+    margin: 0;
+  }
+  a { color: var(--cobalt); text-decoration: none; border-bottom: 1px solid var(--cobalt-dim); }
+  a:hover { border-bottom-color: var(--cobalt); }
+  a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+  .field {
+    position: fixed; inset: 0; z-index: -1;
+  }
+  .field svg { width: 100%; height: 100%; }
+  .strandline {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: draw 2s ease-out forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .strandline { animation: none; stroke-dashoffset: 0; }
+  }
+
+  .page {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 1.4rem;
+    align-items: start;
+  }
+  @media (max-width: 760px) { .page { grid-template-columns: 1fr; padding-top: 2.5rem; } }
+
+  .card {
+    background: var(--veil);
+    border: 1px solid var(--veil-edge);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1.5rem 1.7rem;
+  }
+  .card.hero { grid-column: 1 / -1; padding: 2.2rem 1.7rem; }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 400; letter-spacing: 0.01em;
+    margin: 0 0 0.4rem; text-wrap: balance;
+  }
+  .hero .tag {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--cobalt); margin: 0 0 1.4rem;
+  }
+  nav.bar {
+    display: flex; flex-wrap: wrap; gap: 1.6rem;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
+    border-top: 1px solid var(--veil-edge);
+    padding-top: 1.1rem;
+  }
+  nav.bar a { color: var(--ivory); border: none; }
+  nav.bar a:hover { color: var(--cobalt); }
+
+  h2 {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--dim); margin: 0 0 1.1rem;
+  }
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+  em { color: var(--cobalt); }
+
+  .pub { padding: 0.9rem 0; border-top: 1px solid var(--veil-edge); }
+  .pub:first-of-type { border-top: none; padding-top: 0; }
+  .pub .yr { font-family: ui-monospace, monospace; color: var(--cobalt); font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+  .pub .t { display: block; font-style: italic; font-size: 1.05rem; margin: 0.15rem 0; }
+  .pub .m { color: var(--dim); font-size: 0.9rem; }
+
+  math[display="block"] { display: block; text-align: center; margin: 0.6rem 0 0.6rem; font-size: 1.1rem; }
+  .foot {
+    grid-column: 1 / -1;
+    color: var(--dim);
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.9rem 1.7rem;
+  }
+</style>
+
+<div class="field" aria-hidden="true">
+  <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M60,0 V60 M0,60 H60" fill="none" stroke="#232732" stroke-width="1"></path>
+      </pattern>
+      <path id="level" d="M0,780 H240 V720 H420 V660 H600 V600 H780 V540 H960 V480 H1200 V420 H1380 V360 H1600"></path>
+    </defs>
+    <rect width="1600" height="900" fill="url(#grid)"></rect>
+    <g fill="none" stroke="#ece7dd" stroke-width="1.5" stroke-linejoin="round">
+      <use href="#level" y="120"  class="strandline" stroke-opacity="0.10"></use>
+      <use href="#level" y="60"   class="strandline" stroke-opacity="0.14"></use>
+      <use href="#level" y="0"    class="strandline" stroke-opacity="0.18"></use>
+      <use href="#level" y="-60"  class="strandline" stroke-opacity="0.22"></use>
+      <use href="#level" y="-180" class="strandline" stroke-opacity="0.22"></use>
+      <use href="#level" y="-240" class="strandline" stroke-opacity="0.18"></use>
+      <use href="#level" y="-300" class="strandline" stroke-opacity="0.14"></use>
+      <use href="#level" y="-360" class="strandline" stroke-opacity="0.10"></use>
+      <use href="#level" y="-420" class="strandline" stroke-opacity="0.07"></use>
+    </g>
+    <use href="#level" y="-120" class="strandline" fill="none" stroke="#4f7df9" stroke-width="2.4" stroke-linejoin="round"></use>
+    <g fill="#4f7df9">
+      <circle cx="240" cy="660" r="3.5"></circle>
+      <circle cx="420" cy="600" r="3.5"></circle>
+      <circle cx="600" cy="540" r="3.5"></circle>
+      <circle cx="780" cy="480" r="3.5"></circle>
+      <circle cx="960" cy="420" r="3.5"></circle>
+      <circle cx="1200" cy="360" r="3.5"></circle>
+      <circle cx="1380" cy="300" r="3.5"></circle>
+    </g>
+  </svg>
+</div>
+
+<div class="page">
+  <header class="card hero">
+    <p class="tag">Integrable probability · statistical mechanics</p>
+    <h1>Mikhail Tikhonov</h1>
+    <nav class="bar">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#travel">Travel</a>
+      <a href="#">CV ↓</a>
+    </nav>
+  </header>
+
+  <section class="card" id="about">
+    <h2>About</h2>
+    <p>I am a PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I work on problems in integrable probability and statistical mechanics: random permutations, lozenge tilings, stochastic vertex models, polymer models, random walks.</p>
+    <p>A central feature of these systems is <em>integrability</em>, which arises from their underlying geometric or algebraic structures. Recently my research has centered on applications of vertex models — and related tools such as the Yang–Baxter equation — to other areas of mathematics and to other sciences.</p>
+  </section>
+
+  <aside class="card">
+    <h2>Currently</h2>
+    <math display="block">
+      <mrow>
+        <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo><mo>∝</mo>
+        <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+      </mrow>
+    </math>
+    <p style="color:var(--dim);font-size:0.9rem">Mallows-type measures and the stochastic Demazure product. MathML — no JavaScript anywhere; even the background draws itself with CSS.</p>
+  </aside>
+
+  <section class="card" id="research" style="grid-column: 1;">
+    <h2>Selected work</h2>
+    <div class="pub">
+      <span class="yr">2025+</span>
+      <span class="t">Random permutations and stochastic Demazure product</span>
+      <span class="m">In preparation</span>
+    </div>
+    <div class="pub">
+      <span class="yr">2023</span>
+      <span class="t">Asymptotics of noncolliding q-exchangeable random walks</span>
+      <span class="m">with L. Petrov · J. Phys. A 56(36) · <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380</a></span>
+    </div>
+    <div class="pub">
+      <span class="yr">2019</span>
+      <span class="t">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span>
+      <span class="m">with L. Petrov · J. Stat. Phys. 181 · <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a></span>
+    </div>
+  </section>
+
+  <aside class="card" id="teaching">
+    <h2>Teaching · S26</h2>
+    <p>MATH 2310 — Multivariable Calculus, University of Virginia.</p>
+  </aside>
+
+  <div class="foot card">me@mtikhonov.com · Charlottesville, VA</div>
+</div>

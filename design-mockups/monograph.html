@@ -1,0 +1,182 @@
+<title>Design A — Monograph</title>
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1c1a17;
+    --faint: #6e675e;
+    --rule: #d8d3ca;
+    --accent: #7a2233;
+    --accent-soft: #f3e9eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #191715;
+      --ink: #e9e4dc;
+      --faint: #9b948a;
+      --rule: #3a3630;
+      --accent: #d98a9b;
+      --accent-soft: #2a2023;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #191715; --ink: #e9e4dc; --faint: #9b948a;
+    --rule: #3a3630; --accent: #d98a9b; --accent-soft: #2a2023;
+  }
+  :root[data-theme="light"] {
+    --paper: #ffffff; --ink: #1c1a17; --faint: #6e675e;
+    --rule: #d8d3ca; --accent: #7a2233; --accent-soft: #f3e9eb;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.06rem/1.65 Charter, 'Iowan Old Style', Georgia, serif;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .sheet { max-width: 42rem; margin: 0 auto; padding: 3.5rem 0 4rem; }
+
+  header.masthead { text-align: center; margin-bottom: 3rem; }
+  .masthead h1 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.4rem;
+    text-wrap: balance;
+  }
+  .masthead .role {
+    font-style: italic;
+    color: var(--faint);
+    margin: 0 0 1.6rem;
+  }
+  nav.toc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.6rem;
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    font-size: 0.92rem;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 0.55rem 0;
+  }
+  nav.toc a { color: var(--ink); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); }
+
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+    margin: 2.8rem 0 1rem;
+  }
+  h2 .sn { color: var(--accent); margin-right: 0.6rem; font-variant: normal; letter-spacing: 0; }
+  p { margin: 0 0 1rem; }
+  .lede::first-letter {
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+    color: var(--accent);
+    padding-right: 0.45rem;
+    font-weight: 500;
+  }
+
+  .theorem {
+    border-left: 2px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 0.9rem 1.1rem;
+    margin: 1.4rem 0;
+    font-size: 0.98rem;
+  }
+  .theorem b { font-variant: small-caps; letter-spacing: 0.08em; font-weight: 600; }
+  math[display="block"] { display: block; text-align: center; margin: 1.2rem 0; font-size: 1.15rem; }
+
+  ol.pubs { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+  ol.pubs li {
+    counter-increment: pub;
+    position: relative;
+    padding: 0 0 1.15rem 2.4rem;
+  }
+  ol.pubs li::before {
+    content: "[" counter(pub) "]";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .pub-title { font-style: italic; }
+  .pub-meta { color: var(--faint); font-size: 0.93rem; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    color: var(--faint);
+    font-size: 0.92rem;
+  }
+</style>
+
+<div class="sheet">
+  <header class="masthead">
+    <h1>Mikhail Tikhonov</h1>
+    <p class="role">Integrable probability &amp; statistical mechanics · University of Virginia</p>
+    <nav class="toc">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#travel">Travel</a>
+      <a href="#cv">Curriculum Vitae</a>
+    </nav>
+  </header>
+
+  <h2 id="about"><span class="sn">§1</span>About</h2>
+  <p class="lede">I am a PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I work on problems in integrable probability and statistical mechanics, studying stochastic systems such as random permutations, lozenge tilings, stochastic vertex models, polymer models, and random walks.</p>
+  <p>A central feature of these systems is <em>integrability</em>, which arises from their underlying geometric or algebraic structures. Recently, my research has centered on applications of vertex models — and related tools, such as the Yang–Baxter equation — to other areas of mathematics and to other sciences.</p>
+
+  <div class="theorem">
+    <b>Example</b> (Mallows measure). A random permutation <math><mi>σ</mi><mo>∈</mo><msub><mi>S</mi><mi>n</mi></msub></math> weighted by inversions:
+    <math display="block">
+      <mrow>
+        <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+          <mrow><msub><mi>Z</mi><mi>n</mi></msub><mo>(</mo><mi>q</mi><mo>)</mo></mrow>
+        </mfrac>
+        <mo>,</mo>
+        <mspace width="1em"></mspace>
+        <msub><mi>Z</mi><mi>n</mi></msub><mo>(</mo><mi>q</mi><mo>)</mo>
+        <mo>=</mo>
+        <munder><mo>∑</mo><mrow><mi>σ</mi><mo>∈</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></munder>
+        <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+      </mrow>
+    </math>
+    Math is native MathML — rendered by the browser, no JavaScript.
+  </div>
+
+  <h2 id="research"><span class="sn">§2</span>Selected publications</h2>
+  <ol class="pubs">
+    <li>
+      <span class="pub-title">Random permutations and stochastic Demazure product</span> (2025+).
+      <span class="pub-meta">In preparation.</span>
+    </li>
+    <li>
+      With L. Petrov. <span class="pub-title">Asymptotics of noncolliding q-exchangeable random walks</span> (2023).
+      <span class="pub-meta">J. Phys. A: Math. Theor. 56(36) · <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380</a></span>
+    </li>
+    <li>
+      With L. Petrov. <span class="pub-title">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span> (2019).
+      <span class="pub-meta">J. Stat. Phys. 181 (2020), 1996–2010 · <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a></span>
+    </li>
+  </ol>
+
+  <h2 id="teaching"><span class="sn">§3</span>Teaching, briefly</h2>
+  <p>Instructor of record at UVA: Multivariable Calculus (spring 2026), Calculus II (spring 2025), Calculus I, Survey of Calculus. Earlier: group theory and differential forms at Moscow State University; relativity and general physics at the Kolmogorov Boarding School.</p>
+
+  <footer>
+    <p id="cv"><a href="#">Curriculum Vitae (PDF)</a> · <a href="mailto:me@mtikhonov.com">me@mtikhonov.com</a></p>
+    <p>Charlottesville, Virginia</p>
+  </footer>
+</div>

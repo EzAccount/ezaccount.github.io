@@ -1,0 +1,156 @@
+<title>Design D — Fieldnote</title>
+<style>
+  :root {
+    --paper: #f4f6f4;
+    --card: #fdfdfc;
+    --ink: #22271f;
+    --soft: #6b7265;
+    --moss: #3d6b52;
+    --moss-tint: #e3ece5;
+    --edge: #d6dcd4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #171a17; --card: #1e221e; --ink: #e4e7e1; --soft: #9aa294;
+      --moss: #7fb896; --moss-tint: #23302a; --edge: #2e332d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #171a17; --card: #1e221e; --ink: #e4e7e1; --soft: #9aa294;
+    --moss: #7fb896; --moss-tint: #23302a; --edge: #2e332d;
+  }
+  :root[data-theme="light"] {
+    --paper: #f4f6f4; --card: #fdfdfc; --ink: #22271f; --soft: #6b7265;
+    --moss: #3d6b52; --moss-tint: #e3ece5; --edge: #d6dcd4;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.04rem/1.68 'Iowan Old Style', Palatino, 'Book Antiqua', Georgia, serif;
+    margin: 0;
+  }
+  a { color: var(--moss); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
+
+  .wrap {
+    max-width: 62rem; margin: 0 auto;
+    display: grid; grid-template-columns: 15rem 1fr; gap: 3.5rem;
+    padding: 3rem 1.5rem 4rem;
+  }
+  @media (max-width: 760px) { .wrap { grid-template-columns: 1fr; gap: 2rem; } .rail { position: static; } }
+
+  .rail { position: sticky; top: 2rem; align-self: start; }
+  .rail h1 {
+    font-size: 1.7rem; font-weight: 500; line-height: 1.2;
+    margin: 0 0 0.3rem; text-wrap: balance;
+  }
+  .rail .who { color: var(--soft); font-size: 0.95rem; margin: 0 0 1.6rem; font-style: italic; }
+  .photo {
+    width: 100%; aspect-ratio: 1 / 1;
+    background: var(--moss-tint);
+    border: 1px solid var(--edge);
+    display: grid; place-items: center;
+    color: var(--soft); font-size: 0.85rem;
+    margin-bottom: 1.6rem;
+  }
+  nav.rail-nav { display: flex; flex-direction: column; gap: 0.45rem; font-family: system-ui, sans-serif; font-size: 0.92rem; }
+  nav.rail-nav a { text-decoration: none; color: var(--ink); padding-left: 0.9rem; border-left: 2px solid var(--edge); }
+  nav.rail-nav a:hover { border-left-color: var(--moss); color: var(--moss); }
+  .rail .contact { margin-top: 1.6rem; font-size: 0.9rem; color: var(--soft); }
+
+  h2 {
+    font-family: system-ui, sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--moss);
+    margin: 2.6rem 0 0.9rem;
+  }
+  h2:first-child { margin-top: 0; }
+  main p { margin: 0 0 1rem; max-width: 42rem; }
+  .pullquote {
+    border-left: 3px solid var(--moss);
+    background: var(--moss-tint);
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 42rem;
+    font-size: 1rem;
+  }
+  .pullquote math { font-size: 1.15rem; }
+  .pullquote .cap { display: block; margin-top: 0.5rem; color: var(--soft); font-size: 0.85rem; font-family: system-ui, sans-serif; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: 3px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 0.9rem;
+    max-width: 42rem;
+  }
+  .card .t { font-style: italic; }
+  .card .m { display: block; color: var(--soft); font-size: 0.9rem; font-family: system-ui, sans-serif; margin-top: 0.3rem; }
+  .badge {
+    display: inline-block;
+    background: var(--moss-tint); color: var(--moss);
+    font-family: system-ui, sans-serif;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.12rem 0.5rem; border-radius: 2px;
+    vertical-align: 2px; margin-left: 0.4rem;
+  }
+</style>
+
+<div class="wrap">
+  <aside class="rail">
+    <h1>Mikhail Tikhonov</h1>
+    <p class="who">Mathematician · University of Virginia</p>
+    <div class="photo">photo2024.png</div>
+    <nav class="rail-nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#travel">Travel</a>
+      <a href="#">CV (PDF)</a>
+    </nav>
+    <p class="contact"><a href="mailto:me@mtikhonov.com">me@mtikhonov.com</a><br>Charlottesville, VA</p>
+  </aside>
+
+  <main>
+    <h2 id="about">About</h2>
+    <p>I am a PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I work on problems in integrable probability and statistical mechanics, studying stochastic systems such as random permutations, lozenge tilings, stochastic vertex models, polymer models, and random walks.</p>
+    <p>A central feature of these systems is <em>integrability</em>, which arises from their underlying geometric or algebraic structures. Recently, my research has centered on applications of vertex models — and related tools, such as the Yang–Baxter equation — to other areas of mathematics and to other sciences.</p>
+
+    <div class="pullquote">
+      <math display="block">
+        <mrow>
+          <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+            <mrow><msub><mi>Z</mi><mi>n</mi></msub><mo>(</mo><mi>q</mi><mo>)</mo></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <span class="cap">A Mallows-distributed random permutation — the setting of my current project on stochastic Demazure products. Rendered as MathML, no JavaScript.</span>
+    </div>
+
+    <h2 id="research">Selected publications</h2>
+    <div class="card">
+      <span class="t">Random permutations and stochastic Demazure product</span><span class="badge">in preparation</span>
+      <span class="m">2025+</span>
+    </div>
+    <div class="card">
+      <span class="t">Asymptotics of noncolliding q-exchangeable random walks</span>
+      <span class="m">with L. Petrov · 2023 · J. Phys. A: Math. Theor. 56(36) · <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380</a></span>
+    </div>
+    <div class="card">
+      <span class="t">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span>
+      <span class="m">with L. Petrov · 2019 · J. Stat. Phys. 181 (2020) · <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a></span>
+    </div>
+
+    <h2 id="teaching">Teaching, now</h2>
+    <p>MATH 2310 — Multivariable Calculus (spring 2026), instructor of record. Previously: Calculus I &amp; II, Survey of Calculus at UVA; group theory and differential forms at Moscow State University.</p>
+
+    <h2 id="travel">Next</h2>
+    <p>International Congress of Mathematicians, Philadelphia — July 2026.</p>
+  </main>
+</div>

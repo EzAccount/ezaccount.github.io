@@ -1,0 +1,191 @@
+<title>Design C — Ledger</title>
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --ink: #14130f;
+    --mid: #66625a;
+    --line: #14130f;
+    --hairline: #cfccc4;
+    --red: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a; --ink: #e7e5e0; --mid: #96938c;
+      --line: #e7e5e0; --hairline: #38383e; --red: #ef6a5f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16161a; --ink: #e7e5e0; --mid: #96938c;
+    --line: #e7e5e0; --hairline: #38383e; --red: #ef6a5f;
+  }
+  :root[data-theme="light"] {
+    --bg: #f6f5f2; --ink: #14130f; --mid: #66625a;
+    --line: #14130f; --hairline: #cfccc4; --red: #b3261e;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 0.98rem/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0; padding: 0 1.25rem;
+  }
+  .frame { max-width: 56rem; margin: 0 auto; padding: 2rem 0 4rem; }
+  a { color: inherit; text-decoration: underline; text-decoration-color: var(--mid); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--red); }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+
+  header.top {
+    border-top: 3px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 1.1rem 0;
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem;
+  }
+  header.top h1 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+  header.top .field { font-size: 0.8rem; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  nav.idx {
+    display: flex; flex-wrap: wrap; gap: 0 2rem;
+    border-bottom: 1px solid var(--line);
+    padding: 0.6rem 0;
+    font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  nav.idx a { text-decoration: none; }
+  nav.idx a:hover { color: var(--red); }
+  nav.idx .n { color: var(--red); margin-right: 0.4rem; font-variant-numeric: tabular-nums; }
+
+  h2 {
+    font-size: 0.82rem; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 2.6rem 0 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .intro { max-width: 40rem; font-size: 1.08rem; line-height: 1.65; }
+  .intro p { margin: 1rem 0; }
+
+  table.pubs { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  table.pubs td { vertical-align: top; padding: 0.8rem 1rem 0.8rem 0; border-bottom: 1px solid var(--hairline); }
+  table.pubs td:last-child { padding-right: 0; }
+  td.yr { width: 4rem; font-variant-numeric: tabular-nums; color: var(--mid); }
+  td.what .t { font-weight: 600; display: block; }
+  td.what .m { color: var(--mid); font-size: 0.88rem; }
+  td.links { width: 9rem; text-align: right; font-size: 0.85rem; }
+  .stamp {
+    display: inline-block;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.1rem 0.45rem;
+    transform: rotate(-1.5deg);
+  }
+  .mathrow {
+    border-bottom: 1px solid var(--hairline);
+    padding: 1rem 0;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2.5rem;
+  }
+  .mathrow math { font-size: 1.15rem; font-family: 'STIX Two Math', Charter, Georgia, serif; }
+  .mathrow .note { color: var(--mid); font-size: 0.85rem; }
+
+  dl.grid { display: grid; grid-template-columns: 10rem 1fr; gap: 0.55rem 1.5rem; margin: 1.2rem 0 0; font-size: 0.95rem; }
+  dl.grid dt { color: var(--mid); font-variant-numeric: tabular-nums; }
+  dl.grid dd { margin: 0; }
+  @media (max-width: 560px) { dl.grid { grid-template-columns: 1fr; gap: 0.1rem; } dl.grid dt { margin-top: 0.6rem; } }
+
+  footer {
+    margin-top: 3rem;
+    border-top: 3px solid var(--line);
+    padding-top: 0.8rem;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
+    font-size: 0.85rem; color: var(--mid);
+  }
+</style>
+
+<div class="frame">
+  <header class="top">
+    <h1>TIKHONOV, Mikhail</h1>
+    <span class="field mono">integrable probability — statistical mechanics</span>
+    <span class="field mono">UVA · Charlottesville</span>
+  </header>
+
+  <nav class="idx" aria-label="Sections">
+    <a href="#about"><span class="n">01</span>About</a>
+    <a href="#pubs"><span class="n">02</span>Publications</a>
+    <a href="#teaching"><span class="n">03</span>Teaching</a>
+    <a href="#travel"><span class="n">04</span>Travel</a>
+    <a href="#"><span class="n">05</span>CV (PDF)</a>
+  </nav>
+
+  <section class="intro" id="about">
+    <p>PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I study stochastic systems — random permutations, lozenge tilings, stochastic vertex models, polymer models, random walks — whose common feature is <strong>integrability</strong>, arising from underlying geometric or algebraic structure.</p>
+    <p>Current focus: applications of vertex models and the Yang–Baxter equation to other areas of mathematics and to other sciences.</p>
+  </section>
+
+  <div class="mathrow">
+    <math>
+      <mrow>
+        <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo>
+        <mo>=</mo>
+        <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+        <mo>/</mo>
+        <msub><mi>Z</mi><mi>n</mi></msub><mo>(</mo><mi>q</mi><mo>)</mo>
+      </mrow>
+    </math>
+    <span class="note mono">fig. 1 — Mallows measure. Native MathML; zero JavaScript on this page.</span>
+  </div>
+
+  <h2 id="pubs">02 · Publications &amp; preprints</h2>
+  <table class="pubs">
+    <tr>
+      <td class="yr mono">2025+</td>
+      <td class="what">
+        <span class="t">Random permutations and stochastic Demazure product</span>
+        <span class="m">solo</span>
+      </td>
+      <td class="links"><span class="stamp">In prep</span></td>
+    </tr>
+    <tr>
+      <td class="yr mono">2023</td>
+      <td class="what">
+        <span class="t">Asymptotics of noncolliding q-exchangeable random walks</span>
+        <span class="m">with L. Petrov · J. Phys. A: Math. Theor. 56(36)</span>
+      </td>
+      <td class="links mono"><a href="https://arxiv.org/abs/2303.02380">arXiv</a> · <a href="https://iopscience.iop.org/article/10.1088/1751-8121/acedda/meta">DOI</a></td>
+    </tr>
+    <tr>
+      <td class="yr mono">2020</td>
+      <td class="what">
+        <span class="t">Shock-wave thickness influence to the light diffraction on a plane shock wave</span>
+        <span class="m">with M. Timokhin, I. Mursenkova, I. Znamenskaya · Phys. Fluids 32, 116103</span>
+      </td>
+      <td class="links mono"><a href="https://aip.scitation.org/doi/10.1063/5.0029612">DOI</a></td>
+    </tr>
+    <tr>
+      <td class="yr mono">2019</td>
+      <td class="what">
+        <span class="t">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span>
+        <span class="m">with L. Petrov · J. Stat. Phys. 181 (2020), 1996–2010</span>
+      </td>
+      <td class="links mono"><a href="https://arxiv.org/abs/1912.08671">arXiv</a></td>
+    </tr>
+  </table>
+
+  <h2 id="teaching">03 · Teaching</h2>
+  <dl class="grid">
+    <dt class="mono">spring 2026</dt><dd>MATH 2310 — Multivariable Calculus, instructor of record</dd>
+    <dt class="mono">spring 2025</dt><dd>MATH 1320 — Calculus II, instructor of record</dd>
+    <dt class="mono">2018–2020</dt><dd>Group theory, differential forms (MSU); relativity, physics (Kolmogorov School)</dd>
+  </dl>
+
+  <h2 id="travel">04 · Travel</h2>
+  <dl class="grid">
+    <dt class="mono">2026 · Jul</dt><dd>International Congress of Mathematicians — Philadelphia, PA</dd>
+    <dt class="mono">2026 · Jan</dt><dd>JMM, Special Session on Random Tilings, Random Permutations, and Particle Systems — Washington, DC</dd>
+    <dt class="mono">2025 · Dec</dt><dd>IPAM long-program conference: Geometry, Statistical Mechanics, and Integrability — Los Angeles, CA</dd>
+  </dl>
+
+  <footer>
+    <span class="mono">me@mtikhonov.com</span>
+    <span>Last revised July 2026</span>
+  </footer>
+</div>

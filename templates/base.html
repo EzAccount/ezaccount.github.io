@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{{ config.description }}">
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+</head>
+<body>
+  <div class="field" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M60,0 V60 M0,60 H60" fill="none" stroke="#232732" stroke-width="1"></path>
+        </pattern>
+        <path id="level" d="M0,780 H240 V720 H420 V660 H600 V600 H780 V540 H960 V480 H1200 V420 H1380 V360 H1600"></path>
+      </defs>
+      <rect width="1600" height="900" fill="url(#grid)"></rect>
+      <g fill="none" stroke="#ece7dd" stroke-width="1.5" stroke-linejoin="round">
+        <use href="#level" y="120"  class="strandline" stroke-opacity="0.10"></use>
+        <use href="#level" y="60"   class="strandline" stroke-opacity="0.14"></use>
+        <use href="#level" y="0"    class="strandline" stroke-opacity="0.18"></use>
+        <use href="#level" y="-60"  class="strandline" stroke-opacity="0.22"></use>
+        <use href="#level" y="-180" class="strandline" stroke-opacity="0.22"></use>
+        <use href="#level" y="-240" class="strandline" stroke-opacity="0.18"></use>
+        <use href="#level" y="-300" class="strandline" stroke-opacity="0.14"></use>
+        <use href="#level" y="-360" class="strandline" stroke-opacity="0.10"></use>
+        <use href="#level" y="-420" class="strandline" stroke-opacity="0.07"></use>
+      </g>
+      <use href="#level" y="-120" class="strandline" fill="none" stroke="#4f7df9" stroke-width="2.4" stroke-linejoin="round"></use>
+      <g fill="#4f7df9">
+        <circle cx="240" cy="660" r="3.5"></circle>
+        <circle cx="420" cy="600" r="3.5"></circle>
+        <circle cx="600" cy="540" r="3.5"></circle>
+        <circle cx="780" cy="480" r="3.5"></circle>
+        <circle cx="960" cy="420" r="3.5"></circle>
+        <circle cx="1200" cy="360" r="3.5"></circle>
+        <circle cx="1380" cy="300" r="3.5"></circle>
+      </g>
+    </svg>
+  </div>
+
+  <div class="page">
+    <header class="card hero">
+      <a class="name" href="{{ get_url(path='@/_index.md') }}">Mikhail Tikhonov</a>
+      <nav class="bar">
+        <a href="{{ get_url(path='@/_index.md') }}">About</a>
+        <a href="{{ get_url(path='@/research.md') }}">Research</a>
+        <a href="{{ get_url(path='@/teaching.md') }}">Teaching</a>
+        <a href="{{ get_url(path='@/travel.md') }}">Travel</a>
+        <a href="{{ get_url(path='TikhonovCV_dec25.pdf') }}">CV ↓</a>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+    <footer class="card foot">
+      <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a> · Charlottesville, VA
+    </footer>
+  </div>
+</body>
+</html>

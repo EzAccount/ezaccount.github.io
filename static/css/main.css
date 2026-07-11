@@ -1,0 +1,174 @@
+/* mtikhonov.com — design "Field" (G): full-viewport six-vertex path field,
+   content in translucent panels. Committed dark; zero JavaScript. */
+
+:root {
+  --ground: #0e1014;
+  --veil: rgba(21, 24, 30, 0.84);
+  --veil-edge: rgba(236, 231, 221, 0.12);
+  --ivory: #ece7dd;
+  --dim: #969188;
+  --cobalt: #4f7df9;
+  --cobalt-dim: #33447e;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ivory);
+  font: 1.03rem/1.66 'Iowan Old Style', Palatino, Georgia, serif;
+  margin: 0;
+}
+
+a { color: var(--cobalt); text-decoration: none; border-bottom: 1px solid var(--cobalt-dim); }
+a:hover { border-bottom-color: var(--cobalt); }
+a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+/* --- Background field --- */
+
+.field { position: fixed; inset: 0; z-index: -1; }
+.field svg { width: 100%; height: 100%; }
+
+.strandline {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 2s ease-out forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .strandline { animation: none; stroke-dashoffset: 0; }
+}
+
+/* --- Page structure: translucent cards over the field --- */
+
+.page {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.55fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+@media (max-width: 760px) { .page { grid-template-columns: 1fr; } }
+
+/* Touch devices: backdrop blur over a fixed layer causes scroll jank on iOS
+   Safari, and the 84% veil barely shows it anyway — trade blur for a slightly
+   more opaque veil. Also grow link hit areas toward the 44px tap-target size. */
+@media (pointer: coarse) {
+  .card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(21, 24, 30, 0.93);
+  }
+  nav.bar a, .card.contact a { display: inline-block; padding: 0.5rem 0; }
+}
+
+/* main is not a box of its own: its cards place directly into the page grid. */
+main { display: contents; }
+.card.hero, .foot { grid-column: 1 / -1; }
+/* Subpage content sits in the wide right column; the field shows on the left. */
+@media (min-width: 761px) {
+  article.card { grid-column: 2; }
+}
+
+.card {
+  background: var(--veil);
+  border: 1px solid var(--veil-edge);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 1.5rem 1.7rem;
+}
+
+/* --- Hero card --- */
+
+/* Compact header: name and menu share one row. */
+.card.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem 2rem;
+  padding: 1.1rem 1.7rem;
+}
+.hero .name {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  border: none;
+  white-space: nowrap;
+}
+.hero .name:hover { color: var(--cobalt); }
+nav.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+nav.bar a { color: var(--ivory); border: none; }
+nav.bar a:hover { color: var(--cobalt); }
+
+/* --- Content card --- */
+
+main h1, main h2 {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 2.2rem 0 1.1rem;
+}
+main h1 { font-size: 0.9rem; color: var(--ivory); }
+main h2 { font-size: 0.82rem; }
+main h1:first-child, main h2:first-child { margin-top: 0; }
+
+main p { margin: 0 0 1rem; }
+main p:last-child { margin-bottom: 0; }
+main em { color: var(--cobalt); font-style: italic; }
+main strong { color: var(--ivory); }
+
+/* Markdown lists render as ruled rows, not bullets. */
+main ul { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+main li { padding: 0.8rem 0; border-top: 1px solid var(--veil-edge); }
+main li:first-child { border-top: none; padding-top: 0; }
+
+/* Left rail on the homepage: photo card + contact card stacked. */
+.stack { display: grid; gap: 1.4rem; align-self: start; }
+.card.photo { padding: 0.6rem; line-height: 0; }
+.card.photo img { width: 100%; height: auto; display: block; }
+
+.card.contact h2 {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 0 0 0.6rem;
+}
+.card.contact ul { list-style: none; margin: 0; padding: 0; }
+.card.contact li { padding: 0.45rem 0; border-top: 1px solid var(--veil-edge); }
+.card.contact li:first-child { border-top: none; padding-top: 0; }
+.card.contact a { color: var(--ivory); border: none; }
+.card.contact a:hover { color: var(--cobalt); }
+
+math[display="block"] {
+  display: block;
+  text-align: center;
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+}
+
+/* --- Footer card --- */
+
+.foot {
+  color: var(--dim);
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.9rem 1.7rem;
+}

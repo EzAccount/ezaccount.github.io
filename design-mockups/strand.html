@@ -1,0 +1,185 @@
+<title>Design B — Strand</title>
+<style>
+  /* Committed dark: a deliberate single-theme design (works identically in either viewer theme). */
+  :root {
+    --ground: #101216;
+    --panel: #171a20;
+    --ivory: #ece7dd;
+    --dim: #8f8b83;
+    --hair: #2b2f37;
+    --cobalt: #4f7df9;
+    --cobalt-dim: #33447e;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ivory);
+    font: 1.03rem/1.66 'Iowan Old Style', Palatino, Georgia, serif;
+    margin: 0;
+  }
+  a { color: var(--cobalt); text-decoration: none; border-bottom: 1px solid var(--cobalt-dim); }
+  a:hover { border-bottom-color: var(--cobalt); }
+  a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--hair); }
+  .hero svg { display: block; width: 100%; height: 300px; }
+  .hero-inner {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    max-width: 60rem; margin: 0 auto; padding: 0 2rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .hero .tag {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobalt);
+    margin: 0 0 0.8rem;
+  }
+
+  nav.bar {
+    display: flex; flex-wrap: wrap; gap: 1.8rem;
+    max-width: 60rem; margin: 0 auto; padding: 1rem 2rem;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
+    border-bottom: 1px solid var(--hair);
+  }
+  nav.bar a { color: var(--ivory); border: none; }
+  nav.bar a:hover { color: var(--cobalt); }
+
+  .cols {
+    max-width: 60rem; margin: 0 auto; padding: 3rem 2rem 4rem;
+    display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem;
+  }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } .hero svg { height: 220px; } }
+
+  h2 {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--dim);
+    margin: 0 0 1.1rem;
+  }
+  p { margin: 0 0 1rem; }
+  em { color: var(--cobalt); font-style: italic; }
+
+  .pub { padding: 1rem 0; border-top: 1px solid var(--hair); }
+  .pub:last-child { border-bottom: 1px solid var(--hair); }
+  .pub .yr {
+    font-family: ui-monospace, monospace;
+    color: var(--cobalt);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
+  }
+  .pub .t { display: block; font-style: italic; font-size: 1.05rem; margin: 0.15rem 0; }
+  .pub .m { color: var(--dim); font-size: 0.9rem; }
+
+  aside .panel {
+    background: var(--panel);
+    border: 1px solid var(--hair);
+    padding: 1.2rem 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  math[display="block"] { display: block; text-align: center; margin: 0.8rem 0 0.4rem; font-size: 1.1rem; }
+  .kw { line-height: 2.1; }
+  .kw span {
+    border: 1px solid var(--hair);
+    padding: 0.15rem 0.55rem;
+    margin-right: 0.35rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  footer {
+    border-top: 1px solid var(--hair);
+    color: var(--dim);
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+  }
+  footer div { max-width: 60rem; margin: 0 auto; padding: 1.2rem 2rem; }
+</style>
+
+<header class="hero">
+  <!-- Wiring diagram of a permutation: 8 strands, one marked. -->
+  <svg viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="none" stroke="#ece7dd" stroke-opacity="0.22" stroke-width="1.2">
+      <path d="M0,30  C420,30  780,220 1200,220"></path>
+      <path d="M0,66  C400,66  820,30  1200,30"></path>
+      <path d="M0,102 C440,102 760,268 1200,268"></path>
+      <path d="M0,138 C380,138 840,66  1200,66"></path>
+      <path d="M0,210 C420,210 780,102 1200,102"></path>
+      <path d="M0,246 C400,246 820,246 1200,246"></path>
+      <path d="M0,282 C440,282 760,138 1200,138"></path>
+    </g>
+    <path d="M0,174 C430,174 790,174 1200,174" fill="none" stroke="#4f7df9" stroke-width="2"
+          transform="translate(0,0)"></path>
+    <path d="M0,174 C420,174 780,30 1200,30" fill="none" stroke="#4f7df9" stroke-opacity="0.0" stroke-width="2"></path>
+  </svg>
+  <div class="hero-inner">
+    <p class="tag">Integrable probability</p>
+    <h1>Mikhail Tikhonov</h1>
+  </div>
+</header>
+
+<nav class="bar">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#travel">Travel</a>
+  <a href="#">CV ↓</a>
+</nav>
+
+<div class="cols">
+  <section>
+    <h2 id="about">About</h2>
+    <p>I am a PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I work on problems in integrable probability and statistical mechanics: random permutations, lozenge tilings, stochastic vertex models, polymer models, random walks.</p>
+    <p>A central feature of these systems is <em>integrability</em>, which arises from their underlying geometric or algebraic structures. Recently my research has centered on applications of vertex models — and related tools such as the Yang–Baxter equation — to other areas of mathematics and to other sciences.</p>
+
+    <h2 id="research" style="margin-top:2.4rem">Selected work</h2>
+    <div class="pub">
+      <span class="yr">2025+</span>
+      <span class="t">Random permutations and stochastic Demazure product</span>
+      <span class="m">In preparation</span>
+    </div>
+    <div class="pub">
+      <span class="yr">2023</span>
+      <span class="t">Asymptotics of noncolliding q-exchangeable random walks</span>
+      <span class="m">with L. Petrov · J. Phys. A 56(36) · <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380</a></span>
+    </div>
+    <div class="pub">
+      <span class="yr">2019</span>
+      <span class="t">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span>
+      <span class="m">with L. Petrov · J. Stat. Phys. 181 · <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a></span>
+    </div>
+  </section>
+
+  <aside>
+    <div class="panel">
+      <h2>Currently</h2>
+      <math display="block">
+        <mrow>
+          <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo><mo>∝</mo>
+          <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+        </mrow>
+      </math>
+      <p style="color:var(--dim);font-size:0.9rem;margin:0">Mallows-type measures and the stochastic Demazure product. MathML — no JavaScript.</p>
+    </div>
+    <div class="panel kw">
+      <h2>Keywords</h2>
+      <span>vertex models</span><span>Yang–Baxter</span><span>random tilings</span><span>KPZ</span><span>symmetric functions</span><span>random matrices</span>
+    </div>
+    <div class="panel">
+      <h2 id="teaching">Teaching · S26</h2>
+      <p style="margin:0">MATH 2310 — Multivariable Calculus, University of Virginia.</p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>me@mtikhonov.com · Charlottesville, VA</div>
+</footer>

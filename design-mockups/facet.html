@@ -1,0 +1,166 @@
+<title>Design E — Facet (lozenge tiling)</title>
+<style>
+  /* Committed dark, evolved from Strand. Motif: rhombille tiling, one lit cube. */
+  :root {
+    --ground: #101216;
+    --panel: #171a20;
+    --ivory: #ece7dd;
+    --dim: #8f8b83;
+    --hair: #2b2f37;
+    --brass: #d9a441;
+    --brass-dim: #7a6230;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ivory);
+    font: 1.03rem/1.66 'Iowan Old Style', Palatino, Georgia, serif;
+    margin: 0;
+  }
+  a { color: var(--brass); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+  a:hover { border-bottom-color: var(--brass); }
+  a:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--hair); }
+  .hero svg { display: block; width: 100%; height: 300px; }
+  .hero-inner {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    max-width: 60rem; margin: 0 auto; padding: 0 2rem;
+    background: linear-gradient(90deg, rgba(16,18,22,0.88) 22rem, rgba(16,18,22,0.0) 46rem);
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 400; letter-spacing: 0.01em; margin: 0; text-wrap: balance;
+  }
+  .hero .tag {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--brass); margin: 0 0 0.8rem;
+  }
+
+  nav.bar {
+    display: flex; flex-wrap: wrap; gap: 1.8rem;
+    max-width: 60rem; margin: 0 auto; padding: 1rem 2rem;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
+    border-bottom: 1px solid var(--hair);
+  }
+  nav.bar a { color: var(--ivory); border: none; }
+  nav.bar a:hover { color: var(--brass); }
+
+  .cols {
+    max-width: 60rem; margin: 0 auto; padding: 3rem 2rem 4rem;
+    display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem;
+  }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } .hero svg { height: 220px; } }
+
+  h2 {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--dim); margin: 0 0 1.1rem;
+  }
+  p { margin: 0 0 1rem; }
+  em { color: var(--brass); }
+
+  .pub { padding: 1rem 0; border-top: 1px solid var(--hair); }
+  .pub:last-child { border-bottom: 1px solid var(--hair); }
+  .pub .yr { font-family: ui-monospace, monospace; color: var(--brass); font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+  .pub .t { display: block; font-style: italic; font-size: 1.05rem; margin: 0.15rem 0; }
+  .pub .m { color: var(--dim); font-size: 0.9rem; }
+
+  aside .panel { background: var(--panel); border: 1px solid var(--hair); padding: 1.2rem 1.3rem; margin-bottom: 1.5rem; }
+  math[display="block"] { display: block; text-align: center; margin: 0.8rem 0 0.4rem; font-size: 1.1rem; }
+  footer { border-top: 1px solid var(--hair); color: var(--dim); font-family: ui-monospace, monospace; font-size: 0.85rem; }
+  footer div { max-width: 60rem; margin: 0 auto; padding: 1.2rem 2rem; }
+</style>
+
+<header class="hero">
+  <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <!-- One cube of the rhombille tiling, top-face center at (0,0), edge 26. -->
+      <g id="cube">
+        <path d="M0,-13 L22.5,0 L0,13 L-22.5,0 Z" fill="#232833"></path>
+        <path d="M-22.5,0 L0,13 L0,39 L-22.5,26 Z" fill="#171b23"></path>
+        <path d="M22.5,0 L0,13 L0,39 L22.5,26 Z" fill="#10131a"></path>
+      </g>
+      <g id="cube-lit">
+        <path d="M0,-13 L22.5,0 L0,13 L-22.5,0 Z" fill="#d9a441"></path>
+        <path d="M-22.5,0 L0,13 L0,39 L-22.5,26 Z" fill="#8a6a2c"></path>
+        <path d="M22.5,0 L0,13 L0,39 L22.5,26 Z" fill="#5c4720"></path>
+      </g>
+      <!-- Seam-safe periodic tile: lattice vectors (45,0) and (22.5,26); rect period 45 x 52. -->
+      <pattern id="rhombille" width="45" height="52" patternUnits="userSpaceOnUse">
+        <use href="#cube" x="22.5" y="13"></use>
+        <use href="#cube" x="0" y="39"></use>
+        <use href="#cube" x="45" y="39"></use>
+        <use href="#cube" x="0" y="-13"></use>
+        <use href="#cube" x="45" y="-13"></use>
+        <use href="#cube" x="22.5" y="65"></use>
+      </pattern>
+    </defs>
+    <rect width="1200" height="300" fill="url(#rhombille)"></rect>
+    <!-- Three lit cubes on exact lattice points: defects in the frozen region. -->
+    <use href="#cube-lit" x="742.5" y="65"></use>
+    <use href="#cube-lit" x="945" y="169"></use>
+    <use href="#cube-lit" x="1102.5" y="91"></use>
+  </svg>
+  <div class="hero-inner">
+    <p class="tag">Integrable probability</p>
+    <h1>Mikhail Tikhonov</h1>
+  </div>
+</header>
+
+<nav class="bar">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#travel">Travel</a>
+  <a href="#">CV ↓</a>
+</nav>
+
+<div class="cols">
+  <section>
+    <h2 id="about">About</h2>
+    <p>I am a PhD candidate at UVA Math, advised by <a href="https://lpetrov.cc/">L.&nbsp;Petrov</a>. I work on problems in integrable probability and statistical mechanics: random permutations, lozenge tilings, stochastic vertex models, polymer models, random walks.</p>
+    <p>A central feature of these systems is <em>integrability</em>, which arises from their underlying geometric or algebraic structures. Recently my research has centered on applications of vertex models — and related tools such as the Yang–Baxter equation — to other areas of mathematics and to other sciences.</p>
+
+    <h2 id="research" style="margin-top:2.4rem">Selected work</h2>
+    <div class="pub">
+      <span class="yr">2025+</span>
+      <span class="t">Random permutations and stochastic Demazure product</span>
+      <span class="m">In preparation</span>
+    </div>
+    <div class="pub">
+      <span class="yr">2023</span>
+      <span class="t">Asymptotics of noncolliding q-exchangeable random walks</span>
+      <span class="m">with L. Petrov · J. Phys. A 56(36) · <a href="https://arxiv.org/abs/2303.02380">arXiv:2303.02380</a></span>
+    </div>
+    <div class="pub">
+      <span class="yr">2019</span>
+      <span class="t">Parameter symmetry in perturbed GUE corners process and reflected drifted Brownian motions</span>
+      <span class="m">with L. Petrov · J. Stat. Phys. 181 · <a href="https://arxiv.org/abs/1912.08671">arXiv:1912.08671</a></span>
+    </div>
+  </section>
+
+  <aside>
+    <div class="panel">
+      <h2>Currently</h2>
+      <math display="block">
+        <mrow>
+          <mi>P</mi><mo>(</mo><mi>σ</mi><mo>)</mo><mo>∝</mo>
+          <msup><mi>q</mi><mrow><mi>inv</mi><mo>(</mo><mi>σ</mi><mo>)</mo></mrow></msup>
+        </mrow>
+      </math>
+      <p style="color:var(--dim);font-size:0.9rem;margin:0">Mallows-type measures and the stochastic Demazure product. MathML — no JavaScript.</p>
+    </div>
+    <div class="panel">
+      <h2 id="teaching">Teaching · S26</h2>
+      <p style="margin:0">MATH 2310 — Multivariable Calculus, University of Virginia.</p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>me@mtikhonov.com · Charlottesville, VA</div>
+</footer>

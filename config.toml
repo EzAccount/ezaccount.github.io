@@ -1,0 +1,31 @@
+# Zola 0.22.1 — https://www.getzola.org/documentation/
+base_url = "https://mtikhonov.com"
+title = "Mikhail Tikhonov"
+description = "Mikhail Tikhonov — integrable probability and statistical mechanics"
+compile_sass = false
+build_search_index = false
+
+[extra]
+author = "Mikhail Tikhonov"
+email = "me@mtikhonov.com"
+
+# Contact / profile links rendered on the homepage.
+[[extra.profiles]]
+name = "Mail"
+url = "mailto:me@mtikhonov.com"
+
+[[extra.profiles]]
+name = "ORCID"
+url = "https://orcid.org/0000-0002-4422-1898"
+
+[[extra.profiles]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/tikhonovmikhail/"
+
+[[extra.profiles]]
+name = "GitHub"
+url = "https://github.com/EzAccount"
+
+[[extra.profiles]]
+name = "UVA Math"
+url = "https://math.virginia.edu/people/mst2ae/"

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="stack">
+  <aside class="card photo">
+    {% set ph1x = resize_image(path="photo2024.png", width=390, op="fit_width", format="webp") %}
+    {% set ph2x = resize_image(path="photo2024.png", width=780, op="fit_width", format="webp") %}
+    <img src="{{ ph1x.url | safe }}"
+         srcset="{{ ph1x.url | safe }} 390w, {{ ph2x.url | safe }} 780w"
+         sizes="(max-width: 760px) 92vw, 390px"
+         alt="Mikhail Tikhonov" width="{{ ph1x.width }}" height="{{ ph1x.height }}">
+  </aside>
+  <aside class="card contact">
+    <h2>Contact</h2>
+    <ul>
+      {% for p in config.extra.profiles %}
+      <li><a href="{{ p.url | safe }}">{{ p.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+</div>
+<section class="card">
+{{ section.content | safe }}
+</section>
+{% endblock content %}
