@@ -5,6 +5,12 @@ description = "Mikhail Tikhonov — integrable probability and statistical mecha
 compile_sass = false
 build_search_index = false
 
+# AIP (via doi.org) blocks non-browser requests with 403; links verified manually 2026-07-15.
+[link_checker]
+skip_prefixes = [
+    "https://doi.org/10.1063/",
+]
+
 [extra]
 author = "Mikhail Tikhonov"
 email = "me@mtikhonov.com"

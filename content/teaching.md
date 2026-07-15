@@ -7,12 +7,12 @@ title = "Teaching"
 * MATH2310: Multivariable Calculus • spring 2026
 * MATH1320: Calculus II • spring 2025
 * MATH1310: Calculus I • fall 2022
-* MATH1210: Survey of Calculus I • spring 2022, fall 2023, fall 2025
+* MATH1210: Survey of Calculus I • spring 2022, fall 2023, fall 2025, summer 2026
 
 ## At UVA, as TA
 
-* MATH3250: Ordinary Differential Equations • fall and spring 2021
-* MATH2310: Multivariable Calculus • fall 2020
+* MATH3250: Ordinary Differential Equations • spring 2021, fall 2021
+* MATH2310: Multivariable Calculus • fall 2020, summer 2021
 
 ## Prior to UVA
 
