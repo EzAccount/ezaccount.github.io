@@ -1,5 +1,6 @@
 +++
 title = "Teaching"
+description = "Courses taught by Mikhail Tikhonov as instructor of record and TA at the University of Virginia, Moscow State University, and the Kolmogorov Boarding School."
 +++
 
 ## At UVA, as Instructor of Record
