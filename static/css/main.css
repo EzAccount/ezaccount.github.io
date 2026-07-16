@@ -59,7 +59,8 @@ a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
     -webkit-backdrop-filter: none;
     background: rgba(21, 24, 30, 0.93);
   }
-  nav.bar a, .card.contact a { display: inline-block; padding: 0.5rem 0; }
+  nav.bar a { display: inline-block; padding: 0.5rem 0; }
+  .card.contact a { padding: 0.4rem; }
 }
 
 /* main is not a box of its own: its cards place directly into the page grid. */
@@ -150,11 +151,11 @@ main li:first-child { border-top: none; padding-top: 0; }
   color: var(--dim);
   margin: 0 0 0.6rem;
 }
-.card.contact ul { list-style: none; margin: 0; padding: 0; }
-.card.contact li { padding: 0.45rem 0; border-top: 1px solid var(--veil-edge); }
-.card.contact li:first-child { border-top: none; padding-top: 0; }
-.card.contact a { color: var(--ivory); border: none; }
+.card.contact ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.card.contact li { padding: 0; border: none; }
+.card.contact a { color: var(--ivory); border: none; display: inline-flex; }
 .card.contact a:hover { color: var(--cobalt); }
+.card.contact svg { width: 1.5rem; height: 1.5rem; fill: currentColor; }
 
 math[display="block"] {
   display: block;

@@ -4,8 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-  <meta name="description" content="{{ config.description }}">
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  {% if current_url %}<link rel="canonical" href="{{ current_url | safe }}">{% endif %}
+  <link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="32x32">
+  <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') }}">
   <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+  {%- if config.mode == "build" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB39JFSL7C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JB39JFSL7C');
+  </script>
+  {%- endif %}
 </head>
 <body>
   <div class="field" aria-hidden="true">
@@ -20,15 +33,17 @@
       <g fill="none" stroke="#ece7dd" stroke-width="1.5" stroke-linejoin="round">
         <use href="#level" y="120"  class="strandline" stroke-opacity="0.10"></use>
         <use href="#level" y="60"   class="strandline" stroke-opacity="0.14"></use>
-        <use href="#level" y="0"    class="strandline" stroke-opacity="0.18"></use>
         <use href="#level" y="-60"  class="strandline" stroke-opacity="0.22"></use>
         <use href="#level" y="-180" class="strandline" stroke-opacity="0.22"></use>
-        <use href="#level" y="-240" class="strandline" stroke-opacity="0.18"></use>
         <use href="#level" y="-300" class="strandline" stroke-opacity="0.14"></use>
         <use href="#level" y="-360" class="strandline" stroke-opacity="0.10"></use>
         <use href="#level" y="-420" class="strandline" stroke-opacity="0.07"></use>
       </g>
-      <use href="#level" y="-120" class="strandline" fill="none" stroke="#4f7df9" stroke-width="2.4" stroke-linejoin="round"></use>
+      <g fill="none" stroke="#4f7df9" stroke-linejoin="round">
+        <use href="#level" y="0"    class="strandline" stroke-width="1.8" stroke-opacity="0.45"></use>
+        <use href="#level" y="-120" class="strandline" stroke-width="2.4"></use>
+        <use href="#level" y="-240" class="strandline" stroke-width="1.8" stroke-opacity="0.45"></use>
+      </g>
       <g fill="#4f7df9">
         <circle cx="240" cy="660" r="3.5"></circle>
         <circle cx="420" cy="600" r="3.5"></circle>
