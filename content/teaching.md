@@ -20,4 +20,3 @@ description = "Courses taught by Mikhail Tikhonov as instructor of record and TA
 * Group Theory • Moscow State University, TA • fall 2019, spring 2020
 * Relativity • Kolmogorov Boarding School, Instructor • fall 2019
 * General Physics • Kolmogorov Boarding School, Instructor • spring 2019, fall 2019
-* Introduction to Differential Forms • Moscow State University, TA • fall 2018
