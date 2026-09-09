@@ -7,8 +7,8 @@ description = "Courses taught by Mikhail Tikhonov as instructor of record and TA
 
 * MATH2310: Multivariable Calculus • spring 2026
 * MATH1320: Calculus II • spring 2025
-* MATH1310: Calculus I • fall 2022
-* MATH1210: Survey of Calculus I • spring 2022, fall 2023, fall 2025, summer 2026
+* MATH1310: Calculus I • fall 2022, summer 2026
+* MATH1210: Survey of Calculus I • spring 2022, fall 2023, fall 2025
 
 ## At UVA, as TA
 
